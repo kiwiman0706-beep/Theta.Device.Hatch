@@ -1,0 +1,20 @@
+# 署名鍵・パスワード・ビルド生成物は絶対にコミットしない（公開リポジトリ）
+**/*.jks
+**/*.keystore
+**/*.p12
+**/*.pfx
+**/signing.properties
+**/signing/
+**/.env
+**/.env.*
+**/build/
+**/.gradle/
+**/local.properties
+# Gemini 実APIテスト用の設定（APIキー）
+**/gemini.properties
+# KING JIM TEPRA-Print SDK は使用許諾上ソースとして再配布しない
+**/app/libs/TepraPrint.jar
+**/jniLibs/*/libTepraPrint.so
+# 鍵入りの引き継ぎZIP・元ソースZIP
+*handoff*.zip
+equipment-ledger-source-*.zip

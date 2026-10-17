@@ -1,0 +1,8 @@
+package jp.yaegaki.equipment;
+import org.junit.*;import org.junit.runner.RunWith;import org.robolectric.*;import org.robolectric.annotation.*;import static org.junit.Assert.*;import android.graphics.*;import org.json.*;import java.io.*;import java.util.*;
+@RunWith(RobolectricTestRunner.class) @Config(sdk=34) @GraphicsMode(GraphicsMode.Mode.NATIVE)
+public class GeminiLiveTest {
+ @Test public void syntheticPhotoRecognitionWithOptInTestKey()throws Exception {
+  String path=System.getenv("GEMINI_TEST_CONFIG");Assume.assumeTrue(path!=null);Properties props=new Properties();try(InputStream in=new FileInputStream(path)){props.load(in);}Bitmap b=Bitmap.createBitmap(1000,500,Bitmap.Config.ARGB_8888);Canvas c=new Canvas(b);c.drawColor(Color.WHITE);Paint p=new Paint(Paint.ANTI_ALIAS_FLAG);p.setColor(Color.BLACK);p.setTextSize(54);p.setTypeface(Typeface.MONOSPACE);c.drawText("EPSON",50,90,p);c.drawText("MODEL: TM-T88VI",50,185,p);c.drawText("MAC: A0:B1:C2:D3:E4:F5",50,280,p);c.drawText("IP: 192.168.24.10",50,375,p);ByteArrayOutputStream out=new ByteArrayOutputStream();b.compress(Bitmap.CompressFormat.JPEG,95,out);JSONObject result=new Gemini().identify(props.getProperty("apiKey"),"gemini-2.5-flash",Arrays.asList(out.toByteArray()));JSONArray fields=result.getJSONArray("fields");HashMap<String,String> values=new HashMap<>();for(int i=0;i<fields.length();i++)values.put(fields.getJSONObject(i).getString("key"),fields.getJSONObject(i).getString("value"));assertEquals("TM-T88VI",values.get("model"));assertEquals("A0:B1:C2:D3:E4:F5",values.get("mac"));assertEquals("192.168.24.10",values.get("ip"));assertTrue(values.get("maker").toUpperCase(Locale.ROOT).contains("EPSON"));
+ }
+}

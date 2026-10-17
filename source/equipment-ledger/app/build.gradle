@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+def signingProps = new Properties()
+// signing.properties / release-signing.jks are kept out of the public repository (docs/08_SIGNING_KEY_POLICY.md)
+def signingFile = rootProject.file('signing.properties')
+if (signingFile.exists()) signingFile.withInputStream { signingProps.load(it) }
+android {
+ buildFeatures { buildConfig true }
+ namespace 'jp.yaegaki.equipment'
+ compileSdk 35
+ testOptions { unitTests.includeAndroidResources = true }
+ defaultConfig { applicationId 'jp.yaegaki.equipment'; minSdk 30; targetSdk 35; versionCode 110; versionName '1.1.0' }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+ packaging { jniLibs { useLegacyPackaging true } }
+ signingConfigs { release { storeFile rootProject.file('release-signing.jks'); storePassword signingProps['storePassword']; keyAlias signingProps['keyAlias']; keyPassword signingProps['keyPassword'] } }
+ buildTypes { release { minifyEnabled false; if (signingFile.exists()) signingConfig signingConfigs.release } }
+}
+dependencies {
+ implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.22')
+ testImplementation 'junit:junit:4.13.2'
+ testImplementation 'org.robolectric:robolectric:4.14.1'
+ implementation files('libs/TepraPrint.jar')
+ implementation 'com.google.mlkit:text-recognition-japanese:16.0.1'
+ implementation 'com.google.zxing:core:3.5.3'
+ implementation 'androidx.core:core:1.15.0'
+}
+
+tasks.withType(Test).configureEach {
+ systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2'
+ ['http.proxyHost','http.proxyPort','https.proxyHost','https.proxyPort','javax.net.ssl.trustStore'].each { key -> if(System.getProperty(key)) systemProperty key,System.getProperty(key) }
+}

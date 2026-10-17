@@ -1,0 +1,8 @@
+package jp.yaegaki.equipment;
+import org.junit.*;import static org.junit.Assert.*;import java.util.*;import javax.crypto.*;
+public class CoreTest {
+ @Test public void extractMultipleAndRejectInvalid(){Map<String,String> f=Extract.fields("BUFFALO\nMODEL: WSR-3200AX4S\nMAC: a0-b1-c2-d3-e4-f5\nMAC: 10:20:30:40:50:60\nIP:192.168.24.10\n999.1.2.3\nhttp://192.168.24.10/");assertEquals("A0:B1:C2:D3:E4:F5\n10:20:30:40:50:60",f.get("mac"));assertEquals("192.168.24.10",f.get("ip"));assertEquals("BUFFALO",f.get("maker"));assertEquals("WSR-3200AX4S",f.get("model"));assertEquals("http://192.168.24.10/",f.get("url"));}
+ @Test public void compactMacNeedsLabel(){assertFalse(Extract.fields("0123456789AB").containsKey("mac"));assertEquals("01:23:45:67:89:AB",Extract.fields("MAC: 0123456789AB").get("mac"));assertFalse(Extract.validIP("256.1.1.1"));assertFalse(Extract.validMac("aa:bb:cc:dd:ee"));}
+ @Test public void fullWidthAndUnknown(){assertEquals("192.168.1.1",Extract.fields("ＩＰ：１９２．１６８．１．１").get("ip"));assertFalse(Extract.fields("机の上の黒いパソコン").containsKey("maker"));}
+ @Test public void encryptionTamperingAndWrongPassword()throws Exception{byte[] salt=new byte[16];new java.security.SecureRandom().nextBytes(salt);SecretKey k=Crypto.passwordKey("test-backup-123".toCharArray(),salt);byte[] plain="ID admin / PW 秘密のパスワード".getBytes("UTF-8");byte[] encrypted=Crypto.encrypt(plain,k);assertArrayEquals(plain,Crypto.decrypt(encrypted,k));assertFalse(Arrays.equals(encrypted,Crypto.encrypt(plain,k)));try{Crypto.decrypt(encrypted,Crypto.passwordKey("wrong-password".toCharArray(),salt));fail();}catch(javax.crypto.AEADBadTagException expected){}encrypted[encrypted.length-1]^=1;try{Crypto.decrypt(encrypted,k);fail();}catch(javax.crypto.AEADBadTagException expected){}}
+}

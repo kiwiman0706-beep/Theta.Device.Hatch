@@ -1,0 +1,232 @@
+{
+  "app": "機器台帳",
+  "version": "1.1.0",
+  "handoff_date": "2026-10-17",
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2844,
+      "sha256": "9c7427ddc8fe37cf701db247a210d353d5a96e2b0b586ac456ef4d88d6f54fcd"
+    },
+    {
+      "path": "apk/equipment-ledger-1.1.0.apk",
+      "bytes": 31486073,
+      "sha256": "461e5b731f0926034ba09454906adf9d6215223ca752a0b7588d7286a429a904"
+    },
+    {
+      "path": "docs/AI_HANDOFF.md",
+      "bytes": 1926,
+      "sha256": "30d8594443c72c4c3b8fff3dbc55e482a19554581c331a19c105461349ff677f"
+    },
+    {
+      "path": "docs/ARCHITECTURE_AND_DATA.md",
+      "bytes": 5132,
+      "sha256": "eecd94e7f02236092704acfe67e27b780a162f0c3d61e888b994fd91445534c8"
+    },
+    {
+      "path": "docs/BUILD_AND_RELEASE.md",
+      "bytes": 3943,
+      "sha256": "f11a94d42809a8fe8335d72625846c1401bdce8b4b46619d902efe182f7812f0"
+    },
+    {
+      "path": "docs/PACKAGING_CHECK.md",
+      "bytes": 515,
+      "sha256": "3e59b5bc7d6808b256b74ec0bdfb7d74572f68cc9c6cdb2638009c87b8a55aab"
+    },
+    {
+      "path": "docs/REQUEST_HISTORY.md",
+      "bytes": 1657,
+      "sha256": "ff0cb29ecc1c47bf09c985f7d4633ea28df6aacc59dc9c9ea47a1e4048f871f2"
+    },
+    {
+      "path": "docs/REQUIREMENTS_AND_CONCEPT.md",
+      "bytes": 3959,
+      "sha256": "08ad7193109b69b1c59e5e3bd426d9f670260cfb6e9f070e13809a70a507300e"
+    },
+    {
+      "path": "docs/STATUS_AND_NEXT_STEPS.md",
+      "bytes": 3682,
+      "sha256": "61524f2e60540e60c18fa65618678a0c771c9d2c52e210b097ec2c6afe5b3caf"
+    },
+    {
+      "path": "docs/USER_GUIDE.md",
+      "bytes": 7540,
+      "sha256": "b6504db09a6270249be7185e701b97596cb74b3cf1c760fe61bbf23497ec148d"
+    },
+    {
+      "path": "originals/equipment-ledger-source-1.1.0.zip",
+      "bytes": 94009,
+      "sha256": "ee7ebac06c1b13f1298e8774ea794d49eb2aee24a818b397b8d658e9fe59c671"
+    },
+    {
+      "path": "source/equipment-ledger/.gitignore",
+      "bytes": 131,
+      "sha256": "7a80812981acca3476c19d7eaf5380d4229a8d57363f853d96ed577ea2e19ac4"
+    },
+    {
+      "path": "source/equipment-ledger/README.md",
+      "bytes": 1711,
+      "sha256": "783fb28e42ab51e12e6183f165fac8b1f4f10bc1b737bd687a182298d4691ede"
+    },
+    {
+      "path": "source/equipment-ledger/THIRD_PARTY_NOTICES.md",
+      "bytes": 1428,
+      "sha256": "27dd1111def8de45d5159b14f3b7df879c7b3a6344f6e5b65c1dbd48466a23f4"
+    },
+    {
+      "path": "source/equipment-ledger/app/build.gradle",
+      "bytes": 1580,
+      "sha256": "5db04756e83ac0449ffc98f69763a4e419518663cee591bed4c87ab7192a9ad9"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/AndroidManifest.xml",
+      "bytes": 1424,
+      "sha256": "8ecf9aba493b94a758ffb4f1a9d4a9e39a9f798823bc25d4e047d5bc51ed3f22"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Crypto.java",
+      "bytes": 1132,
+      "sha256": "1699415ead34a9601f048ea5e2c015a236c9ac4325197f2343d94c3eca2f5baf"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Extract.java",
+      "bytes": 2214,
+      "sha256": "2059810c631e3119c3bd67e83085e8df266a042ad99e49063f256ab2e13f4f7b"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Gemini.java",
+      "bytes": 8804,
+      "sha256": "43847ba7109b9f186f840575b73868dc09d07704bc0f01adecae9f61de08995e"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/GeminiUi.java",
+      "bytes": 7874,
+      "sha256": "bbf6c32934abf89e978030c0660e3171a676e2455adb28ae5f2e4e1d99fde601"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Labels.java",
+      "bytes": 2356,
+      "sha256": "706bed53a3159b67edbe73f3ecd3ff5951a6ad9a795c854dbb7af386885c84a4"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/MainActivity.java",
+      "bytes": 36888,
+      "sha256": "c89820609e902e872a1d9cefa1c0d20427349d263a9d47e7218def3b16ee0e72"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Printer.java",
+      "bytes": 4633,
+      "sha256": "ec17996f50d5477bd52761dcc49b49edc79f20a2bfc6808cc796aeba6b40b468"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/java/jp/yaegaki/equipment/Store.java",
+      "bytes": 8048,
+      "sha256": "f0c137ef20b9b4911e8b3fc0b5a80044acf0b342740998854b1b08a35d315967"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/res/drawable/icon.xml",
+      "bytes": 533,
+      "sha256": "151186d4b1d56b5de313200417af90f587a0adc20a019501c12bf23bca28187e"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/res/values/styles.xml",
+      "bytes": 421,
+      "sha256": "df562c27c29aa98a582a9d8c79ba05cb2861370a891635cc8c1726d08ed3dd7e"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/res/xml/data_extraction_rules.xml",
+      "bytes": 396,
+      "sha256": "379f3648c12f64f1402dc46ef38fe8490a9e44fc251fbd735a8d56986d52826c"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/main/res/xml/paths.xml",
+      "bytes": 159,
+      "sha256": "0c80a6f529cf80e621691b4cf31e4202face8a2b1ebe0e8bbc198293021f7f1d"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/CoreTest.java",
+      "bytes": 1831,
+      "sha256": "ed131ed48e9d33f612b1a0d7cba8b6c6e4e62420fee156a4123ffeb93cda658b"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/GeminiLiveTest.java",
+      "bytes": 1688,
+      "sha256": "c6a35c23452b53efb3df5f8596038c28e747028dc79605a6507b24e33ec89a75"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/GeminiTest.java",
+      "bytes": 3393,
+      "sha256": "2b959bd285e8dd97a81cd95e147f07d8b51ba04d45b9ec0a512d8fbe81a4ed89"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/LabelTest.java",
+      "bytes": 1287,
+      "sha256": "d2286396c0a8783f4f9910c68aba8a4ad575acc66644b93a1fc2db4a8fe77fed"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/StoreTest.java",
+      "bytes": 2020,
+      "sha256": "c9cf3768bd23bf1cf7c370019ca42e6b59831c5476bfa9a2240cab079f83f00e"
+    },
+    {
+      "path": "source/equipment-ledger/app/src/test/java/jp/yaegaki/equipment/UiTest.java",
+      "bytes": 2165,
+      "sha256": "e5835993789a717bfd53422ecaab0e6af9410ac29ecc8fa8f1346206d54ea4d6"
+    },
+    {
+      "path": "source/equipment-ledger/build.gradle",
+      "bytes": 126,
+      "sha256": "b6e77f22f5758ee6b88bb234d9b49d65daadbc1ab044e2e3205bf1634d70f85e"
+    },
+    {
+      "path": "source/equipment-ledger/docs/使い方.md",
+      "bytes": 7540,
+      "sha256": "b6504db09a6270249be7185e701b97596cb74b3cf1c760fe61bbf23497ec148d"
+    },
+    {
+      "path": "source/equipment-ledger/docs/検証結果.md",
+      "bytes": 1074,
+      "sha256": "06987205c935c05e27a93a4c334fb10eb14ea2eff8e7019b04bf7cdee0c8de95"
+    },
+    {
+      "path": "source/equipment-ledger/gradle/wrapper/gradle-wrapper.jar",
+      "bytes": 43705,
+      "sha256": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+    },
+    {
+      "path": "source/equipment-ledger/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 251,
+      "sha256": "cdab1ffb439219b1db125e3c99a86cf2424f8762b9b3faa404ed061e3635ecde"
+    },
+    {
+      "path": "source/equipment-ledger/gradle.properties",
+      "bytes": 76,
+      "sha256": "4d4c82226865844bdc85391d907a383da4a35d3a3f5348985d5ec3997ab932fe"
+    },
+    {
+      "path": "source/equipment-ledger/gradlew",
+      "bytes": 8752,
+      "sha256": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933"
+    },
+    {
+      "path": "source/equipment-ledger/gradlew.bat",
+      "bytes": 2966,
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    {
+      "path": "source/equipment-ledger/release-signing.jks",
+      "bytes": 3502,
+      "sha256": "a34bf112816cc702e2803853dee84fe29ab0d208e27e90213362902dc224cde3"
+    },
+    {
+      "path": "source/equipment-ledger/settings.gradle",
+      "bytes": 274,
+      "sha256": "222ef74a4a231e70c87c6846178e3294d3af15850e0a64fa8cdede79b40e69d8"
+    },
+    {
+      "path": "source/equipment-ledger/signing.properties",
+      "bytes": 127,
+      "sha256": "4c3e1aee179cbefec968318f611a10e301ce1d5ebbee736dfc43b0bac1e10dae"
+    }
+  ]
+}

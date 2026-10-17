@@ -1,0 +1,9 @@
+.gradle/
+**/build/
+local.properties
+signing.properties
+release-signing.jks
+app/libs/*.jar
+app/src/main/jniLibs/
+
+gemini.properties
